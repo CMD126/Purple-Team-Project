@@ -85,8 +85,7 @@ Follow AWS Penetration Testing Policy.
 
 ## Phase 2 – Detection Objectives
 
-- Analyze Phase 1 telemetry  
-- Build detections/alerts  
+- Analyze Phase 1 telemetry    
 - Map to MITRE ATT&CK  
 - Document visible vs. blind activity + log sources + queries  
 - Explain gaps explicitly
