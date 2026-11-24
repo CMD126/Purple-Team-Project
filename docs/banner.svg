@@ -1,22 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="t">
   <title id="t">Purple Team Security Exercise</title>
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#FFB454" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#FFB454" stop-opacity="0"/>
-    </radialGradient>
+    <pattern id="p" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#2A3550" stroke-opacity=".45"/></pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFB454" stop-opacity=".55"/><stop offset="1" stop-color="#FFB454" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect x="1" y="1" width="1198" height="258" rx="22" fill="#0A0E1A" stroke="#2A3550" stroke-width="2"/>
-  <g transform="translate(70 50) scale(2.6)">
-    <path d="M8 14 22 24 32 32" fill="none" stroke="#8FA3C7" stroke-opacity=".55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8 50 22 40 32 32" fill="none" stroke="#8FA3C7" stroke-opacity=".9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="8" cy="14" r="3" fill="#8FA3C7" fill-opacity=".4"/>
-    <circle cx="8" cy="50" r="3" fill="#8FA3C7" fill-opacity=".4"/>
-    <path d="M32 32 50 32" fill="none" stroke="#FFB454" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="50" cy="32" r="15" fill="url(#glow)"/>
-    <circle cx="50" cy="32" r="6" fill="#FFB454"/>
-    <circle cx="50" cy="32" r="2.2" fill="#0A0E1A"/>
-  </g>
-  <text x="300" y="132" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="68" font-weight="600" letter-spacing="-1"><tspan fill="#E6EAF2">Purple Team </tspan><tspan fill="#FFB454">Exercise</tspan></text>
-  <text x="302" y="184" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#8FA3C7">Red team attack, blue team detection, MITRE ATT&amp;CK</text>
+  <rect x="1" y="1" width="1198" height="298" rx="22" fill="#0A0E1A" stroke="#2A3550" stroke-width="2"/>
+  <rect x="1" y="1" width="1198" height="298" rx="22" fill="url(#p)"/>
+  <text x="60" y="128" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="56" font-weight="600" letter-spacing="-1"><tspan fill="#E6EAF2">Purple Team </tspan><tspan fill="#FFB454">Exercise</tspan></text>
+  <text x="62" y="174" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="26" fill="#8FA3C7">Red team attack, blue team detection</text>
+  <rect x="62" y="232" width="179" height="34" rx="17" fill="#121829" stroke="#2A3550"/>
+  <text x="152" y="254" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="15" fill="#8FA3C7">Active Directory</text>
+  <rect x="253" y="232" width="138" height="34" rx="17" fill="#121829" stroke="#2A3550"/>
+  <text x="322" y="254" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="15" fill="#8FA3C7">Elastic SIEM</text>
+  <rect x="404" y="232" width="138" height="34" rx="17" fill="#121829" stroke="#2A3550"/>
+  <text x="473" y="254" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="15" fill="#8FA3C7">MITRE ATT&amp;CK</text>
+  <circle cx="790" cy="150" r="96" fill="#FF6B81" fill-opacity=".20" stroke="#FF6B81" stroke-opacity=".8" stroke-width="2"/>
+  <circle cx="900" cy="150" r="96" fill="#7DD3FC" fill-opacity=".20" stroke="#7DD3FC" stroke-opacity=".8" stroke-width="2"/>
+  <text x="745" y="146" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#FF6B81">RED</text>
+  <text x="745" y="170" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="13" fill="#8FA3C7">attack</text>
+  <text x="945" y="146" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#7DD3FC">BLUE</text>
+  <text x="945" y="170" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="13" fill="#8FA3C7">detect</text>
+  <circle cx="845" cy="150" r="24" fill="url(#glow)"/>
+  <circle cx="845" cy="150" r="8" fill="#FFB454"/>
+  <circle cx="845" cy="150" r="3.0" fill="#0A0E1A"/>
+  <text x="845" y="196" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="12" fill="#FFB454">gaps</text>
+  <rect x="1040" y="48" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1040" y="84" width="22" height="28" rx="4" fill="#FF6B81" fill-opacity="0.55" stroke="#FF6B81"/>
+  <rect x="1040" y="120" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1040" y="156" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1040" y="192" width="22" height="28" rx="4" fill="#7DD3FC" fill-opacity="0.55" stroke="#7DD3FC"/>
+  <rect x="1040" y="228" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1068" y="48" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1068" y="84" width="22" height="28" rx="4" fill="#FF6B81" fill-opacity="0.55" stroke="#FF6B81"/>
+  <rect x="1068" y="120" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1068" y="156" width="22" height="28" rx="4" fill="#7DD3FC" fill-opacity="0.55" stroke="#7DD3FC"/>
+  <rect x="1068" y="192" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1068" y="228" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1096" y="48" width="22" height="28" rx="4" fill="#7DD3FC" fill-opacity="0.55" stroke="#7DD3FC"/>
+  <rect x="1096" y="84" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1096" y="120" width="22" height="28" rx="4" fill="#FF6B81" fill-opacity="0.55" stroke="#FF6B81"/>
+  <rect x="1096" y="156" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1096" y="192" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1096" y="228" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1124" y="48" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1124" y="84" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1124" y="120" width="22" height="28" rx="4" fill="#FF6B81" fill-opacity="0.55" stroke="#FF6B81"/>
+  <rect x="1124" y="156" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <rect x="1124" y="192" width="22" height="28" rx="4" fill="#7DD3FC" fill-opacity="0.55" stroke="#7DD3FC"/>
+  <rect x="1124" y="228" width="22" height="28" rx="4" fill="#121829" fill-opacity="1" stroke="#2A3550"/>
+  <text x="1096" y="276" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="12" fill="#8FA3C7">ATT&amp;CK</text>
 </svg>
