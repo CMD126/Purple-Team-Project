@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/banner.svg" alt="Purple Team Security Exercise" width="100%">
+</p>
+
 # ICC-003 — Purple Team Security Exercise
 
 **Team:** The Bugs
@@ -30,6 +34,12 @@ Purple team simulation: Red Team executes a black-box engagement, then Blue Team
 | **Overall Risk** | CRITICAL |
 
 **Out-of-scope hosts (do not target):** `10.0.0.23` · `10.0.0.100` · `10.0.0.200` · `10.0.0.176`
+
+### Lab environment
+
+![Network diagram of 10.0.0.0/24: gateway and switch, the domain controller, two Windows workstations and the Linux servers, with open ports per host](purple-team/diagrams/diagram.png)
+
+The full attack path, step by step with MITRE ATT&CK techniques, is in [purple-team/attack-path-summary.md](purple-team/attack-path-summary.md).
 
 ---
 
