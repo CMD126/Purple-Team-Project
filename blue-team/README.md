@@ -1,4 +1,4 @@
-# Phase 2 — SOC Visibility & Detection Engineering
+# Phase 2: SOC Visibility & Detection Engineering
 
 **Team:** The Bugs
 **Exercise:** ICC-003 · CyberCore Purple Team
@@ -20,9 +20,9 @@
 
 ## Overall Verdict
 
-> **FULL DOMAIN COMPROMISE — CORP.ORG**
+> **FULL DOMAIN COMPROMISE: CORP.ORG**
 >
-> Red team achieved Domain Administrator via **FTP credential theft → RDP login → LSASS dump → hash crack**.
+> Red team achieved Domain Administrator via **FTP credential theft, RDP login, LSASS dump, hash crack**.
 > Apache CVE-2021-41773 provides an independent RCE path.
 > **Risk Rating: CRITICAL**
 
@@ -47,7 +47,7 @@
 |--------|-----------|-------------|
 | Windows Security Event Log | Authentication, account activity | Events 4624, 4625, 1102 |
 | TerminalServices-RemoteConnectionManager | RDP authentication | Event 1149 |
-| FileZilla FTP Server Logs | FTP sessions | Session 1110 — anonymous login + file download |
+| FileZilla FTP Server Logs | FTP sessions | Session 1110: anonymous login + file download |
 | Network PCAP | Raw traffic | FTP command stream, Apache RCE payload |
 
 ---
@@ -72,5 +72,5 @@
 | [dashboard/index.html](dashboard/index.html) | Interactive IR dashboard (open in browser) |
 | [detections/windows-event-analysis.md](detections/windows-event-analysis.md) | Windows Event Log deep-dive (1102, 4625, 4624, 1149) |
 | [detections/ftp-forensics.md](detections/ftp-forensics.md) | FTP Session 1110 packet-by-packet analysis |
-| [detections/network-forensics.md](detections/network-forensics.md) | PCAP analysis — Apache RCE + network events |
+| [detections/network-forensics.md](detections/network-forensics.md) | PCAP analysis: Apache RCE + network events |
 | [mitre-attack-mapping.md](mitre-attack-mapping.md) | Full MITRE ATT&CK technique mapping |
