@@ -1,0 +1,18 @@
+cat > /tmp/.hidden/find_files.sh << 'EOF'
+#!/bin/sh
+echo "SEARCHING"
+echo "[*] Configuration files:"
+find / -name "*.conf" -o -name "*.config" 2>/dev/null | grep -v snap | head -30
+echo ""
+echo "[*] Backup files:"
+find / -name "*.bak" -o -name "*.backup" -o -name "*.old" 2>/dev/null | head -20
+echo ""
+echo "[*] Database files:"
+find / -name "*.db" -o -name "*.sql" -o -name "*.sqlite" 2>/dev/null | head -20
+echo ""
+echo "[*] Script files:"
+find / -name "*.sh" -o -name "*.py" -o -name "*.pl" 2>/dev/null | grep -v snap | head -20
+EOF
+#EXEC
+chmod +x /tmp/.hidden/find_files.sh
+/tmp/.hidden/find_files.sh
