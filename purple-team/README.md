@@ -1,9 +1,9 @@
-# Purple Team Synthesis — ICC-003
+# Purple Team Synthesis: ICC-003
 
 **Team:** The Bugs
 **Exercise:** ICC-003 · CyberCore Purple Team
 **Environment:** corp.org · 10.0.0.0/24 · AWS-hosted
-**Overall Risk Rating:** CRITICAL — Full Domain Compromise
+**Overall Risk Rating:** CRITICAL (Full Domain Compromise)
 
 ---
 
@@ -36,23 +36,23 @@ The Bugs conducted a two-phase purple team exercise against the corp.org Active 
 - Security log clearance on Domain Controller (Event 1102)
 
 ### Blind (Not Detected)
-- Network reconnaissance (Nmap, WhatWeb) — no NIDS in place
-- LSASS process memory dump — no Sysmon/EDR on target hosts
-- Command execution on compromised hosts — no process-level telemetry
-- Offline password hash cracking — inherently undetectable
+- Network reconnaissance (Nmap, WhatWeb): no NIDS in place
+- LSASS process memory dump: no Sysmon/EDR on target hosts
+- Command execution on compromised hosts: no process-level telemetry
+- Offline password hash cracking: inherently undetectable
 - Full scope of activity post-DC compromise (log cleared)
 
 ---
 
 ## Critical Findings
 
-1. **Anonymous FTP is the root cause.** Removing `rdp-settings.txt` from the FTP share — or disabling anonymous FTP entirely — would have broken the attack chain at the first step.
+1. **Anonymous FTP is the root cause.** Removing `rdp-settings.txt` from the FTP share, or disabling anonymous FTP entirely, would have broken the attack chain at the first step.
 
-2. **No EDR/Sysmon on Windows hosts.** The most impactful Red Team action (LSASS dump → Domain Admin) generated **zero detectable events**. This is the single most important gap to close.
+2. **No EDR/Sysmon on Windows hosts.** The most impactful Red Team action (LSASS dump to Domain Admin) generated **zero detectable events**. This is the single most important gap to close.
 
 3. **Plaintext credentials at rest.** `rdp-settings.txt` storing plaintext RDP credentials represents a fundamental credential hygiene failure.
 
-4. **Log clearance went undetected for days.** Event 1102 was the last detectable event — by then the damage was done. Real-time SIEM alerting on Event 1102 is required.
+4. **Log clearance went undetected for days.** Event 1102 was the last detectable event; by then the damage was done. Real-time SIEM alerting on Event 1102 is required.
 
 5. **Independent RCE path via Apache CVE-2021-41773.** Even if the FTP chain had been blocked, the unpatched Apache server provides a second full-compromise path. Patching Apache 2.4.49 is critical.
 
@@ -79,6 +79,6 @@ The Bugs conducted a two-phase purple team exercise against the corp.org Active 
 | Section | Description |
 |---------|-------------|
 | [attack-path-summary.md](attack-path-summary.md) | Full kill chain with MITRE IDs and evidence |
-| [../red-team/](../red-team/) | Red Team Phase 1 — offensive operations |
-| [../blue-team/](../blue-team/) | Blue Team Phase 2 — detection and analysis |
+| [../red-team/](../red-team/) | Red Team Phase 1: offensive operations |
+| [../blue-team/](../blue-team/) | Blue Team Phase 2: detection and analysis |
 | [../docs/](../docs/) | Assignment brief (ICC-003 PDF) |

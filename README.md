@@ -2,7 +2,7 @@
   <img src="docs/banner.svg" alt="Purple Team Security Exercise" width="100%">
 </p>
 
-# ICC-003 — Purple Team Security Exercise
+# ICC-003: Purple Team Security Exercise
 
 A team Purple Team exercise on an Active Directory lab (`10.0.0.0/24`): Red Team runs a black-box attack, then Blue Team analyses the telemetry to find what was detected and what was not.
 

@@ -1,4 +1,4 @@
-# Phase 1 — Red Team (Black Box)
+# Phase 1: Red Team (Black Box)
 
 **Team:** The Bugs
 **Exercise:** ICC-003 · CyberCore Purple Team
@@ -29,7 +29,7 @@ The following hosts must **not** be targeted under any circumstances:
 
 ---
 
-## Rules of Engagement — Prohibited Actions
+## Rules of Engagement: Prohibited Actions
 
 - Denial-of-Service (DoS)
 - RDP brute-force
